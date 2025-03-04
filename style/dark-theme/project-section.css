@@ -1,0 +1,93 @@
+
+#project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.project > h3 {
+    color: #00aaff; /* Vibrant Blue */
+    font-size: 1.2rem;
+    margin-bottom: 5px; 
+}
+
+.project > h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+/* 
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card > img {
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+} */
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #1e1e1e; /* Dark card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* overflow: hidden; */
+    width: 400px;
+    height: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 80%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card h5 {
+    margin: 15px;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff; /* White text for better contrast */
+}
+
+/* Optional: Add a subtle border to the images */
+.card img {
+    border-bottom: 2px solid #333;
+}

@@ -1,0 +1,88 @@
+/* .feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+#feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 9%;
+
+}
+
+.feature > h3 {
+    color: #00aaff; /* Vibrant Blue */
+    font-size: 1.2rem;
+    margin-bottom: 5px; 
+}
+
+.feature > h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 10px;
+    /* background-color: black; */
+    padding: 20px;
+}
+
+.feature-box {
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); */
+    max-width: 400px;
+    max-height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+.feature-box i {
+    font-size: 50px;
+    color: #00AEEF;
+    margin-bottom: 15px;
+}
+
+.feature-box h5 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.btn-container {
+    margin-top: 15px;
+}
+
+.btn-container button {
+    background: #00AEEF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-container button:hover {
+    background: #0078a0;
+}
