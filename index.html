@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website Using HTML CSS Only</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/menu.css">
     <!-- <link rel="stylesheet" href="/style/dark-theme/main-page.css">
     <link rel="stylesheet" href="/style/dark-theme/home-section.css">
     <link rel="stylesheet" href="/style/dark-theme/about-section.css">
@@ -28,6 +29,19 @@
                 <li><a href="#skill">SKILL</a></li>
                 <li><a href="#education">EDUCATION</a></li>
                 <li><a href="#contact">CONTACT</a></li>   
+            </ul>
+        </nav>
+        <i class='bx bx-menu'id="burger" aria-hidden="true"></i>
+        <nav class="menu-panel" id="menu-panel-id">
+            <button class="close-btn" id="btn-close">&times;</button>
+            <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#">FEATURE</a></li>
+            <li><a href="#">PROJECT</a></li>
+            <li><a href="#">SKILL</a></li>
+            <li><a href="#">EDUCATION</a></li>
+            <li><a href="#">CONTACT</a></li>
             </ul>
         </nav>
         <!-- Floating Theme Toggle Button -->
@@ -111,7 +125,7 @@
                 <div class="feature-box">
                     <i class='bx bx-world'></i>  
                     <h5>Web Design</h5>
-                    <p>focuses on a clean interface, easy navigation, and smooth usability for a seamless experience.  
+                    <p>Prioritizes a visually appealing, responsive, and user-friendly interface that works seamlessly across devices and browsers.  
                     </p>
                     <div class="btn-container">
                         <button>Learn More</button>
@@ -120,8 +134,8 @@
                 </div>
                 <div class="feature-box">
                     <i class='bx bx-code-alt'></i>
-                    <h5>UI & UX Design</h5>
-                    <p>focuses on a clean interface, easy navigation, and smooth usability for a seamless experience.  
+                    <h5>Backend Implementation</h5>
+                    <p>Ensures robust, scalable, and secure server-side functionality to support the frontend and deliver a smooth user experience.  
                     </p>
                     <div class="btn-container">
                         <button>Learn More</button>
@@ -134,19 +148,40 @@
             <h1>My Project</h1>
             <div class="project-container">
                 <div class="card">
+                    <h6>01 : Event Planning System Desktop App (MVC Architecture)</h6>
                     <img src="/assests/image/inspira.png" alt="Event Planning System Image">
                     <h4>Desktop App</h4>
-                    <h6>Event Planning System Desktop App (MVC Architecture)</h6>
+                    <div class="technologies-stack">
+                        <p>Used Languages & Technologies: <strong>Java, JavaFX, Mysql, JDBC, MVC Architecture</strong></p>    
+                    </div>
+                    <div class="code-container">
+                        <button>Source Code</button>
+                    </div>
+                    
                 </div>
                 <div class="card">
-                    <img src="/assests/image/tic-tac-toe.png" alt="Tic Tac Toe Game Image">
+                    <h6>02 : Tic-Tac-Toe Game With AI technology</h6>
+                    <img src="/assests/image/tic-tac-toe.png" alt="Tic Tac Toe Game Image" class="tic-tac-img">
                     <h4>Desktop App</h4>
-                    <h6>Tic-Tac-Toe Game With AI technology</h6>
+                    <div class="technologies-stack">
+                        <p>Used Languages & Technologies: <strong>Java, JavaFX, Mysql, JDBC, MVC Architecture</strong></p>    
+                    </div>
+                    <div class="code-container">
+                        <button>Source Code</button>
+                    </div>
+                    
                 </div>
                 <div class="card">
+                    <h6>03 : Event Planning System Desktop App (Layerd Architecture)</h6>
                     <img src="/assests/image/inspira.png" alt="Event Planning System Image">
                     <h4>Desktop App</h4>
-                    <h6>Event Planning System Desktop App (Layerd Architecture)</h6>
+                    <div class="technologies-stack">
+                        <p>Used Languages & Technologies: <strong>Java, JavaFX, Mysql, JDBC, Layerd Architecture</strong></p>    
+                    </div>
+                    <div class="code-container">
+                        <button>Source Code</button>
+                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -243,6 +278,7 @@
             </p>
         </div>
     </footer>
+    <script src="/js/MenuCreation.js"></script>
     <script src="/js/ThemeChange.js"></script>  
 </body>
 </html>

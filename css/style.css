@@ -50,7 +50,7 @@
 
 
 
-
+/* ===== General Styles ===== */
 * {
     margin: 0;
     padding: 0;
@@ -149,6 +149,7 @@ section {
 /* ===== Home Section ===== */
 #home {
     height: 100vh;
+    position: relative;
 }
 
 .home-content {
@@ -200,11 +201,6 @@ section {
     color: var(--secondary-color);
 }
 
-.btn-box a:hover {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
 .home-sci {
     position: absolute;
     bottom: 4.6875rem; /* 75px */
@@ -233,11 +229,85 @@ section {
     color: var(--text-light);
 }
 
+/* ===== Responsive Design ===== */
+
+/* Laptop - 1024px */
+@media (max-width: 1024px) {
+    .header {
+        height: 10vh; /* Reduce header height */
+        padding: 0 5%; /* Increase padding */
+    }
+
+    .logo {
+        width: 2.5rem; /* 40px */
+        height: 2.5rem; /* 40px */
+        margin-right: 0.625rem; /* 10px */
+    }
+
+    .navbar ul li a {
+        font-size: 0.875rem; /* 14px */
+        margin-left: 1.5625rem; /* 25px */
+    }
+
+    .floating-toggle {
+        bottom: 1rem; /* 16px */
+        right: 1rem; /* 16px */
+    }
+
+    .theme-toggle {
+        padding: 0.5rem; /* 8px */
+        font-size: 0.875rem; /* 14px */
+    }
+
+    section {
+        padding: 0 5%; /* Adjust section padding */
+    }
+    .home-content h1 {
+        font-size: 1.7rem; /* 27.2px */
+        /* margin-bottom: -1rem;  */
+        margin-top: 1.4rem; /* 22px */
+
+    }
+
+    .home-content {
+        width: 50%;
+    }
+    
+    .home-content h2 {
+        font-size: 1.25rem; /* 20px */
+    }
+
+    .home-content h3 {
+        font-size: 0.9rem; /* 16px */
+    }
+
+    .home-content p {
+        font-size: 0.8rem; /* 14px */
+    }
+
+
+
+    .btn-box a {
+        width: 10rem; /* 160px */
+        height: 2.75rem; /* 44px */
+        font-size: 1rem; /* 16px */
+    }
+
+    .home-sci {
+        bottom: 3.75rem; /* 60px */
+    }
+}
+
 /* ===== About Section ===== */
 #about {
     min-height: 50vh;
     margin-bottom: 5%;
 }
+
+/* .about-content{
+    padding-top: 5%;
+    border-top: var(--border-dark);
+} */
 
 .about-content h1 {
     font-size: 2.5rem; /* 40px */
@@ -261,9 +331,24 @@ section {
     color: var(--text-dark);
 }
 
+/* Responsive Design */
+
+@media screen and (max-width: 1024px) {
+    .about-content h1 {
+        font-size: 2rem; /* 32px */
+    }
+
+    .about-content p {
+        font-size: 1rem; /* 16px */
+    }
+    
+}
+
 /* ===== Feature Section ===== */
+
 #feature {
     margin-bottom: 5.625rem; /* 90px */
+    /* padding: 0 10%; */
 }
 
 .feature h3 {
@@ -286,6 +371,7 @@ section {
 .feature-box {
     background: var(--background-light);
     color: var(--text-light);
+    /* width: 10rem; */
     text-align: center;
     padding: 1.875rem; /* 30px */
     border-radius: 0.9375rem; /* 15px */
@@ -313,6 +399,7 @@ section {
     font-size: 0.875rem; /* 14px */
     color: var(--text-dark);
     line-height: 1.5;
+    margin-bottom: 1.25rem;
 }
 
 .btn-container button {
@@ -330,9 +417,50 @@ section {
     background: var(--primary-color);
 }
 
+/* ===== Responsive Design for 1024px ===== */
+@media (max-width: 1024px) {
+
+    feature h3 {
+        font-size: 1rem;
+    }
+
+    .feature h1 {
+        font-size: 2rem;
+    }
+
+
+    .feature-container {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 1rem; /* 16px */
+    }
+
+    .feature-box {
+        padding: 1.25rem; /* 20px */
+    }
+
+    .feature-box i {
+        font-size: 2.5rem; /* 40px */
+    }
+
+    .feature-box h5 {
+        font-size: 1.25rem; /* 20px */
+    }
+
+    .feature-box p {
+        font-size: 0.8125rem; /* 13px */
+    }
+
+    .btn-container button {
+        padding: 0.5rem 1rem; /* 8px 16px */
+        font-size: 0.8125rem; /* 13px */
+    }
+}
+
+
 /* ===== Project Section ===== */
 #project {
-    padding: 4rem 10%;
+    margin-bottom: 5.625rem; /* 90px */
+    /* padding: 0 10%; */
     text-align: center;
 }
 
@@ -357,27 +485,34 @@ section {
 
 .card {
     background-color: var(--background-light);
+    /* width: 20rem;
+    height: 25rem; */
     border-radius: 0.625rem;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    padding: 1.5rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.card:hover {
+.card:hover  h6{
     transform: translateY(-5px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .card img {
     width: 80%;
-    height: 12.5rem; /* 200px */
+    height: 12rem;
     border-radius: 0.625rem; /* 10px */
-    object-fit: cover;
+    object-fit: cover;
 }
+
+.card > .tic-tac-img {
+    height: 10rem;
+}
+
 
 .card h4 {
     font-size: 0.9rem;
@@ -386,13 +521,59 @@ section {
 }
 
 .card h6 {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
     font-size: 1.1rem;
     color: var(--text-dark);
 }
 
+.technologies-stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.code-container {
+    padding: 10px 20px;
+}
+
+.code-container button {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    width: 8.5rem; 
+    height: 2rem;
+    /* padding: 10px 20px; */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.code-container button:hover {
+    background-color: var(--text-light);
+    color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1024px) {
+    .project h3 {
+        font-size: 1rem;
+    }
+
+    .project h1 {
+        font-size: 2rem;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
+   
+
     .project-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -408,12 +589,13 @@ section {
 /* ===== Skill Section ===== */
 #skill {
     margin-bottom: 5.625rem; /* 90px */
+    /* padding: 0 10%; */
 }
 
 .skill h3 {
     color: var(--primary-color);
     font-size: 1.2rem; /* 19.2px */
-    margin: 3.125rem 0; /* 50px */
+    margin-bottom: 2rem;
 }
 
 .skill-container {
@@ -451,20 +633,32 @@ section {
     color: var(--text-light);
 }
 
-/* ===== Education Section ===== */
-#education {
-    padding: 2rem 10%;
-    background-color: var(--background-light);
-    color: var(--text-light);
+@media screen and (max-width: 1024px) {
+    /* .skill-container {
+        grid-template-columns: repeat(4, 1fr);
+    } */
+
+    .skill h3 {
+        font-size: 1rem;
+    }
+
+    .skills i {
+        font-size: 3.125rem; /* 50px */
+    }
+    
 }
 
-#education h3 {
+/* ===== Education Section ===== */
+#education {
+    margin-bottom: 5.625rem; /* 90px */
+}
+.education h3 {
     color: var(--primary-color);
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
-#education h1 {
+.education h1 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
@@ -476,7 +670,7 @@ section {
 }
 
 .education-item {
-    background-color: var(--background-dark);
+    background-color: var(--background-light);
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
@@ -499,24 +693,19 @@ section {
     color: var(--text-dark);
     margin-bottom: 0.5rem;
 }
+
+@media screen and (max-width: 1024px) {
+    .education h3 {
+        font-size: 1rem;
+    }
+
+    .education h1 {
+        font-size: 2rem;
+    }
+    
+}
+
 /* ===== Contact Section ===== */
-.contact {
-    width: 100%;
-    padding: 3rem 10%;
-    /* background-color: #f5f5f5; */
-    /* text-align: center; */
-}
-
-/* .contact h3 {
-    font-size: 1.8rem;
-    color: #333;
-}
-
-.contact h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #222;
-} */
 
 .contact h3 {
     color: var(--primary-color);
@@ -530,15 +719,15 @@ section {
 }
 
 .contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    display: flex;
+    gap: 3rem;
     align-items: center;
-    width: 75rem;
+    /* width: 75rem;meken tmi header ek aul giye */
     margin: auto;
 }
 
 .contact-info {
+    /* width: ; */
     text-align: left;
     background: var(--background-light); /* #f9f9f9; */
     padding: 2rem;
@@ -594,6 +783,7 @@ section {
 }
 
 .contact-form {
+    /* width: 35rem; */
     background: var(--background-light); /* #f9f9f9; */
     padding: 2rem;
     border-radius: 0.625rem;
@@ -633,18 +823,27 @@ section {
 }
 
 .contact-form button:hover {
-    background: var(--primary-color);
+    background: var(--text-light);
+    color: var(--secondary-color);
 }
 
 /* Responsive Design */
-@media (max-width: 56.25rem) {
+@media (max-width: 1024px) {
+    .contact h3 {
+        font-size: 1rem;
+    }
+
+    .contact h1 {
+        font-size: 2rem;
+    }   
+
     .contact-container {
         grid-template-columns: 1fr;
-        text-align: center;
+        /* text-align: center; */
     }
     
     .contact-info {
-        text-align: center;
+        /* text-align: center; */
     }
 }
 
@@ -676,6 +875,6 @@ section {
     grid-column: 1 / -1;
     margin-top: 2rem;
     font-size: 0.875rem;
-    border-top: var(--border-light);
+    border-top: var(--border-dark);
     padding-top: 1rem;
 }
