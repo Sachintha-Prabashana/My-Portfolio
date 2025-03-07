@@ -1,57 +1,143 @@
-#skill {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 9%;
- 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ===== Global Styles ===== */
+:root {
+    --primary-color: #00aaff;
+    --secondary-color: #2D9596;
+    --background-dark: #121212;
+    --background-light: #1e1e1e;
+    --text-light: #ffffff;
+    --text-dark: #b4bfc0;
+    --shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease;
+    --border-dark: 0.0625rem solid rgba(255, 255, 255, 0.2);
 }
 
-.skill > h3 {
-    color: #00aaff; /* Vibrant Blue */
-    font-size: 1.2rem;
-    margin: 50px 0; 
+/* ===== Light Mode Styles ===== */
+.light-mode {
+    --primary-color: #0078a0;
+    --background-dark: #ffffff;
+    --background-light: #f5f5f5;
+    --text-light: #121212;
+    --text-dark: #333333;
+    --shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
-/* Skill container with grid layout */
-.skill-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 6 columns */
-    gap: 20px; /* Space between items */
-    width: 100%; /* Full width */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Add padding inside the container */
-    background-color: #1e1e1e; /* Background color for the skill container */
-    border-radius: 10px; /* Rounded corners for the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-}
-
-/* Individual skill boxes */
-.skills {
-    background-color: #2c2c2c; /* Darker background for skill boxes */
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect for skill boxes */
-.skills:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Icon styling */
-.skills i {
-    font-size: 70px; /* Icon size */
-    color: #ffffff; /* White color for icons */
-    margin-bottom: 10px;
-}
-
-/* Skill name styling */
-.skills h5 {
+/* ===== General Styles ===== */
+* {
     margin: 0;
-    font-size: 16px;
-    color: #ffffff; /* White text for skill names */
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--background-dark);
+    color: var(--text-light);
+}
+
+/* ===== Skills Container (Two Cards Side by Side) ===== */
+.skills-container {
+    display: flex;
+    gap: 1.25rem; /* 20px */
+    max-width: 1000px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ===== Individual Skill Card ===== */
+.skills-card {
+    width: 45%;
+    background: var(--background-light);
+    padding: 1.25rem; /* 20px */
+    border-radius: 0.75rem; /* 12px */
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.skills-card h2 {
+    margin-bottom: 0.9375rem; /* 15px */
+    font-size: 1rem; /* 20px */
+    color: var(--text-dark);
+}
+
+/* ===== Skill Section ===== */
+.skill-sec {
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem; /* 8px */
+}
+
+.skill-sec .title {
+    font-size: 0.9rem; /* 16px */
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+/* Percentage Box */
+.percent {
+    font-size: 0.8rem; /* 14px */
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 0.25rem 0.375rem; /* 4px 6px */
+    border-radius: 0.25rem; /* 4px */
+    position: relative;
+}
+
+.percent::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    height: 0.5rem; /* 8px */
+    width: 0.5rem; /* 8px */
+    background-color: var(--secondary-color);
+    bottom: -0.25rem; /* -4px */
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* ===== Skill Bar ===== */
+.skill-bar {
+    width: 100%;
+    height: 0.75rem; /* 12px */
+    background: #e0e0e0;
+    border-radius: 0.375rem; /* 6px */
+    overflow: hidden;
+}
+
+.skill-per {
+    display: block;
+    height: 100%;
+    border-radius: var(--text-light); /* 6px */
+    transition: width 1s ease-in-out;
+    background: var(--secondary-color);
+}
+
+/* Skill Levels */
+.html { width: 78%; }
+.css { width: 80%; }
+.java { width: 76%; }
+.js { width: 78%; }
+.git { width: 85%; }
+.vscode { width: 90%; }
+.figma { width: 75%; }
+.firebase { width: 78%; }
+.bootstrap { width: 75%; }
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) { /* 768px */
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skills-card {
+        width: 100%;
+    }
 }
