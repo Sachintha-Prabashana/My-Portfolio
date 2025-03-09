@@ -1,0 +1,119 @@
+
+
+/* ===== About Section ===== */
+#about {
+    /* min-height: 50vh; */
+    margin-bottom: 5.625rem; /* 90px */
+    /* margin-top: 2rem; */
+    padding-top: 1.5rem;
+}
+
+/* .about-content{
+    padding-top: 5%;
+    border-top: var(--border-dark);
+} */
+
+.about-content h1 {
+    font-size: 2.5rem; /* 40px */
+    color: var(--primary-color);
+    margin-bottom: 1.875rem; /* 30px */
+}
+
+.about-content p {
+    font-size: 1.2rem; /* 19.2px */
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.my-info {
+    margin-top: 1.25rem; /* 20px */
+}
+
+.my-info ul li {
+    list-style: none;
+    margin-bottom: 0.625rem; /* 10px */
+    color: var(--text-dark);
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1024px) {
+    .about-content h1 {
+        font-size: 2rem; /* 32px */
+    }
+
+    .about-content p {
+        font-size: 1rem; /* 16px */
+    }
+
+    #about {
+        margin-bottom: 4.625rem; /* 74px */
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        margin-top: 11rem;
+    }
+
+    .about-content p {
+        font-size: 0.9rem; /* 14px */
+    }
+
+    .my-info ul li {
+        font-size: 0.9rem; /* 14px */
+    }
+
+    .about-content h1 {
+        font-size: 1.75rem; /* 28px */
+    }
+    
+    #about {
+        margin-bottom: 3.625rem; /* 74px */
+        padding-top: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .about {
+        margin-top: 8rem;
+    }
+    .about-content p {
+        font-size: 0.8rem; /* 13px */
+    }
+
+    .my-info ul li {
+        font-size: 0.8rem; /* 13px */
+    }
+
+    .about-content h1 {
+        font-size: 1.5rem; /* 24px */
+    }
+
+    #about {
+        margin-bottom: 2.625rem; /* 58px */
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .about {
+        margin-top: 6rem;
+    }
+    .about-content p {
+        font-size: 0.7rem; /* 12px */
+    }
+
+    .my-info ul li {
+        font-size: 0.7rem; /* 12px */
+    }
+
+    .about-content h1 {
+        font-size: 1.25rem; /* 20px */
+    }
+
+    #about {
+        margin-bottom: 2.5rem; /* 40px */
+    }   
+}
