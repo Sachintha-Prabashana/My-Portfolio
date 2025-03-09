@@ -104,11 +104,11 @@ body {
 }
 
 .content-container.left::after {
-    right: -12px;
+    right: -17px;
 }
 
 .content-container.right::after {
-    left: -12px;
+    left: -17px;
 }
 
 .content {
@@ -131,7 +131,69 @@ body {
     margin-bottom: 0.5rem;
 }
 
+
 /* ===== Responsive Styles ===== */
+
+/* ===== Large Laptop - 1440px ===== */
+@media screen and (max-width: 1440px) {
+    .education-container {
+        max-width: 1100px;
+    }
+
+    .education-container::after {
+        width: 5px;
+    }
+
+    .content-container {
+        width: 48%;
+        padding: 15px 35px;
+    }
+
+    .content {
+        padding: 25px;
+    }
+
+    .content h2 {
+        font-size: 1.75rem;
+    }
+
+    .content p {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===== Laptop - 1024px ===== */
+@media screen and (max-width: 1024px) {
+    .education-container {
+        max-width: 950px;
+    }
+
+    .education-container::after {
+        width: 5px;
+    }
+
+    .content-container.left::after {
+        right: -34px;
+    }
+
+    .content-container {
+        width: 48%;
+        padding: 15px 30px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .education-container::after {
         left: 20px;
